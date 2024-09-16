@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdi3xquabvf7n"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_7ehwe"]
+[ext_resource type="Texture2D" uid="uid://c3kooweptmimi" path="res://scenes/Tower_defense_background.png" id="2_6lpk7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cciue"]
+texture = ExtResource("2_6lpk7")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 529.0
+offset_top = 292.0
+offset_right = 526.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ehwe")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -523.0
+offset_top = -286.0
+offset_right = 1775.0
+offset_bottom = 997.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cciue")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 2
+offset_left = 272.0
+offset_top = 401.0
+offset_right = 944.0
+offset_bottom = 504.0
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 2
+offset_left = 271.0
+offset_top = 637.0
+offset_right = 945.0
+offset_bottom = 740.0
+text = "Quit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

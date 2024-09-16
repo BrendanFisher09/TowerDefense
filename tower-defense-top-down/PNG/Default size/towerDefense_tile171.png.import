@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/towerDefense_tile171.png-e575c2a4946e3eef60e8
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ys5eoymr26j4"]
+
+[ext_resource type="Texture2D" uid="uid://cvhb2ksvhd55d" path="res://tower-defense-top-down/Tilesheet/towerDefense_tilesheet.png" id="1_mqjwe"]
+
+[node name="TowerDefenseTilesheet" type="Sprite2D"]
+position = Vector2(750, 386)
+texture = ExtResource("1_mqjwe")
