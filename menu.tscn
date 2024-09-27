@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bdi3xquabvf7n"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_7ehwe"]
-[ext_resource type="Texture2D" uid="uid://c3kooweptmimi" path="res://scenes/Tower_defense_background.png" id="2_6lpk7"]
+[ext_resource type="Texture2D" uid="uid://c3kooweptmimi" path="res://tower-defense-top-down/PNG/Default size/scenes/Tower_defense_background.png" id="2_6lpk7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cciue"]
 texture = ExtResource("2_6lpk7")
@@ -11,10 +11,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 529.0
-offset_top = 292.0
-offset_right = 526.0
-offset_bottom = 252.0
+offset_left = 505.0
+offset_top = 322.0
+offset_right = 502.0
+offset_bottom = 282.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7ehwe")
@@ -22,10 +22,10 @@ script = ExtResource("1_7ehwe")
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-offset_left = -523.0
-offset_top = -286.0
-offset_right = 1775.0
-offset_bottom = 997.0
+offset_left = -497.0
+offset_top = -321.0
+offset_right = 1801.0
+offset_bottom = 962.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_cciue")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -51,6 +51,9 @@ offset_top = 637.0
 offset_right = 945.0
 offset_bottom = 740.0
 text = "Quit"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(644, 304)
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
