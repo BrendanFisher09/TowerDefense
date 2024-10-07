@@ -13,7 +13,7 @@ func _on_gui_input(event):
 		tempTower.process_mode = Node.PROCESS_MODE_DISABLED
 	elif event is InputEventMouseMotion and event.button_mask == 1:
 		# Lefy Click Down Drag
-		get_child(1).global_position = event.global_position
+		get_child(1).global_position = get_global_mouse_position()
 
 	elif event is InputEventMouseButton and event.button_mask == 0:
 		#Left Click Up
@@ -22,5 +22,5 @@ func _on_gui_input(event):
 		var path = get_tree().get_root().get_node("Main/Towers")
 
 		path.add_child(tempTower)
-		tempTower.global_position = event.global_position
-		tempTower.getNode("Area").hide()
+		tempTower.global_position = get_global_mouse_position()
+		tempTower.get_node("Panel").hide()
